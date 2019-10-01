@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-datepicker.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-5 text-center">Expense Tracker</h1>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="expense-name">Expense name</label>
+                    <input type="text" class="form-control" id="expense-name">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="expense-amount">Amount</label>
+                    <input type="number" step="0.01" class="form-control" id="expense-amount">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="expense-category">Category</label>
+                    <select class="form-control" id="expense-category">
+                        <option selected>Groceries</option>
+                        <option>Travel</option>
+                        <option>Clothing</option>
+                        <option>Rent</option>
+                        <option>Pharmacy</option>
+                        <option>Miscellaneous</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="expense-date">Date</label>
+                    <input type="text" class="form-control" id="expense-date">
+                </div>
+            </div>
+            <div class="form-row col-md-6 mx-auto my-3">
+                <button id="expense-btn" class="btn btn-primary btn-lg btn-block">Add expense</button>
+            </div>
+        </form>
+
+        <form class="my-4">
+            <div class="form-row align-items-end">
+                <div class="form-group col-md-4">
+                    <label for="filter-name">Name</label>
+                    <input type="text" class="form-control" id="filter-name">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="filter-category">Category</label>
+                    <select class="form-control" id="filter-category">
+                        <option selected></option>
+                        <option>Groceries</option>
+                        <option>Travel</option>
+                        <option>Clothing</option>
+                        <option>Rent</option>
+                        <option>Pharmacy</option>
+                        <option>Miscellaneous</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-1 mx-2">
+                    <button id="filter-btn" class="btn btn-success">Filter</button>
+                </div>
+                <div class="form-group col-md-1">
+                    <button id="reset-filter-btn" class="btn btn-success">Reset</button>
+                </div>
+            </div>
+        </form>
+        <table id="expense-table" class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Expense name</th>
+                    <th scope="col">Amount (zł)</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Date</th>
+                </tr>
+            </thead>
+            <tbody id="expense-table-body"></tbody>
+        </table>
+
+        <div class="text-left my-4">
+            <h2>Total: <span id="total" class="mx-2"><strong>0</strong></span>zł</h2>
+        </div>
+
+        <canvas id="my-chart"></canvas>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="bootstrap-datepicker.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
