@@ -4,13 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Expense Tracker</title>
+    <!-- Bootrstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="bootstrap-datepicker.css">
+    <!-- Datepicker jQuery -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="my-5 text-center">Expense Tracker</h1>
-        <form>
+        <h1 class="display-4 my-5 text-center">
+            <i class="fas fa-money-bill-wave text-success"></i>
+            Expense Tracker
+        </h1>
+        <form id="expense-form">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="expense-name">Expense name</label>
@@ -41,7 +46,7 @@
             </div>
         </form>
 
-        <form class="my-4">
+        <form id="filter-form" class="my-4">
             <div class="form-row align-items-end">
                 <div class="form-group col-md-4">
                     <label for="filter-name">Name</label>
@@ -86,15 +91,23 @@
         <canvas id="my-chart"></canvas>
 
     </div>
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-    <script type="text/javascript" src="bootstrap-datepicker.js"></script>
+    <!-- Datepicker jQuery  -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
     
-    <script type="text/javascript" src="main.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/7235818b31.js" crossorigin="anonymous"></script>
+    
+    <script type="module" src="main.mjs"></script>
+
 </body>
 </html>
